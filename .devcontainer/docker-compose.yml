@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  python-ml:
+    container_name: python-ml
+    image: python-ml-img
+    build:
+      context: ../python-docker
+      dockerfile: ./Dockerfile
+    volumes:
+      - ../src:/opt/app/src
+    tty: true
